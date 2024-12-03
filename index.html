@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Halaman Sign In -->
+  <div id="sign-in" class="page active">
+    <div class="container">
+      <h2>Login</h2>
+      <input type="text" id="sign-in-username" placeholder="Username">
+      <input type="password" id="sign-in-password" placeholder="Password">
+      <button onclick="goToHome()">Sign In</button>
+      <p>Belum punya akun? <a href="#" onclick="goToSignUp()">Sign Up</a></p>
+    </div>
+  </div>
+
+  <!-- Halaman Sign Up -->
+  <div id="sign-up" class="page">
+    <div class="container">
+      <h2>Sign Up</h2>
+      <input type="text" id="sign-up-username" placeholder="Username">
+      <input type="password" id="sign-up-password" placeholder="Password">
+      <button onclick="goToHome()">Sign Up</button>
+      <p>Sudah punya akun? <a href="#" onclick="goToSignIn()">Sign In</a></p>
+    </div>
+  </div>
+
+  <!-- Halaman Home -->
+  <div id="home" class="page">
+    <div class="container">
+      <h2>Home</h2>
+      <p>Selamat datang! Klik tombol di bawah untuk masuk ke Todo List.</p>
+      <button onclick="goToTodo()">Go to Todo List</button>
+    </div>
+  </div>
+
+  <!-- Halaman Todo -->
+  <div id="todo" class="page">
+    <div class="container">
+      <h2>Todo List</h2>
+      <div class="todo-header">
+        <input type="text" id="new-todo-input" placeholder="Add a new todo...">
+        <button onclick="addTodo()">Add</button>
+      </div>
+      <div id="todo-list" class="todo-list"></div>
+      <footer>&copy; 2024</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
